@@ -1,2 +1,9 @@
 # Docker
 .env
+
+# Parcel
+.parcel-cache
+dist
+
+# Node
+node_modules
