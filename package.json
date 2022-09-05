@@ -2,9 +2,14 @@
   "name": "printmode-tools-react",
   "version": "0.0.1",
   "description": "",
+  "homepage": "https://rtvu.github.io/printmode-tools-react/",
   "scripts": {
     "start": "parcel src/index.html",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
+    "build": "parcel build src/index.html --public-url ./",
+    "clean": "rm -rf .parcel-cache dist",
+    "predeploy": "yarn clean && yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +26,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.7.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
