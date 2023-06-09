@@ -20,6 +20,15 @@ RUN \
   usermod -aG sudo user && \
   echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
+RUN \
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
+  apt update && \
+  apt install -y --no-install-recommends \
+    nodejs \
+    && \
+  npm install --global yarn && \
+  rm -rf /var/lib/apt/lists/*
+
 USER user
 
 RUN \

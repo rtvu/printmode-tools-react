@@ -2,5 +2,21 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "project",
   "workspaceFolder": "/home/user/project",
-  "remoteUser": "user"
+  "remoteUser": "user",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "files.associations": {
+          "*.css": "tailwindcss"
+        },
+        "prettier.prettierPath": "./node_modules/prettier",
+        "prettier.requireConfig": true
+      },
+      "extensions": ["bradlc.vscode-tailwindcss", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  }
 }
