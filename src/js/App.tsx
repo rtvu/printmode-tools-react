@@ -1,5 +1,7 @@
+import Navbar from "./Navbar";
+
 const App = () => {
-  return "Printmode Tools";
+  return <Navbar />;
 };
 
 export default App;
